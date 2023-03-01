@@ -1,0 +1,17 @@
+name: repro
+
+services:
+- name: repro
+  github:
+    repo: warflash/do-path-repro
+    branch: main
+    deploy_on_push: true
+  routes:
+    - path: /path/
+  build_command: npm run build
+  run_command: npm run start
+  envs:
+    - key: NUXT_APP_BASE_URL
+      value: /path/
+      scope: RUN_AND_BUILD_TIME
+      type: GENERAL
