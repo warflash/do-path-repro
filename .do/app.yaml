@@ -7,7 +7,8 @@ services:
     branch: main
     deploy_on_push: true
   routes:
-    - path: /path/
+  - path: /path/
+  source_dir: /
   build_command: npm run build
   run_command: npm run start
   envs:
