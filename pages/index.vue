@@ -6,12 +6,18 @@
                 Hello World
             </span>
             <NuxtLink to="/nested">-> Nested</NuxtLink>
+            <span>
+                API: {{ apiData.data }}
+            </span>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute()
+
+const apiData = useFetch("/api/hello");
+
 </script>
 
 <style lang="scss" scoped>
