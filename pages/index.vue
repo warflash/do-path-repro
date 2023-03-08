@@ -16,7 +16,9 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const apiData = useFetch("/api/hello");
+const apiData = useFetch("/api/hello", {
+    server: false,
+});
 
 </script>
 
